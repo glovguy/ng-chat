@@ -1,0 +1,18 @@
+<p>
+	message-river works!
+</p>
+
+{{state}}
+
+<ng-container *ngFor="let message of messages">
+	<br/>
+		<div class='alert {{message["style"]}}'>
+			<div class='message_text'>
+				{{message['text']}}
+			</div>
+
+			<div class='pull-right sender_indicator col-md-1'>
+				{{message['sender']}}
+			</div>
+		</div>
+</ng-container>
