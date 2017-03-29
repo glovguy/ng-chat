@@ -1,11 +1,11 @@
 .sender_indicator {
-	text-align: right;
-	position: relative;
-	right: 10px;
-	height: 100%;
+    text-align: right;
+    position: relative;
+    top: -25px;
 }
+
 .message_text {
-	font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .bot {
@@ -15,7 +15,7 @@
 }
 
 .user {
-	color: #3c763d;
+    color: #3c763d;
     background-color: #dff0d8;
     border-color: #d6e9c6;
 }

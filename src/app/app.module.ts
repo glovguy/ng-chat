@@ -6,12 +6,16 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ClientComponent } from './client/client.component';
 import { MessageRiverComponent } from './message-river/message-river.component';
+import { CollaborationComponent } from './collaboration/collaboration.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientComponent,
-    MessageRiverComponent
+    MessageRiverComponent,
+    CollaborationComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

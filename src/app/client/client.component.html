@@ -1,13 +1,8 @@
-<p>
-	client works!
-</p>
 <div class="jumbotron form-group">
 	<label for="message_input">Message:</label>
 	<input type="text" id="message_input" class="form-control"/>
 	<button onclick="sendMessage()" id="send_button" class="btn btn-primary" style="display: none;">send</button>
 </div>
-<div id="chatlog" class="alert"></div>
-
 <script type="text/javascript">
 	document.getElementById("message_input")
 	.addEventListener("keyup", function(event) {
