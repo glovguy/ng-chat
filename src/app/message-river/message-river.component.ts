@@ -1,20 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageService } from '../message.service'
+import { Ng2Cable, Broadcaster } from 'ng2-cable/js/index';
+
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-message-river',
   templateUrl: './message-river.component.html',
   styleUrls: ['./message-river.component.scss'],
-  providers: [MessageService]
+  providers: [MessageService, Ng2Cable, Broadcaster]
 })
 export class MessageRiverComponent implements OnInit {
 
   messages: Object;
 
-  constructor(private MessageService: MessageService) { }
+  constructor(private MessageService: MessageService,
+              private ng2cable: Ng2Cable,
+              private broadcaster: Broadcaster) { }
 
   ngOnInit() {
     this.getMessages();
+    this.ng2cable.subscribe('http://localhost:3000/cable', 'ChatChannel');
+
+    this.broadcaster.on<string>('newMessage').subscribe(
+      message => {
+        console.log(message);
+      }
+    );
   }
 
   getMessages(): void {

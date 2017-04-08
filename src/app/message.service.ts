@@ -17,4 +17,13 @@ export class MessageService {
           );
   }
 
+  newMessage(message:any, successCallback, failureCallback) {
+    this.http.post(`/chat/messages`, message)
+    .map(resp => resp.json())
+    .subscribe(
+        (data) => successCallback(data),
+        (error) => failureCallback(error)
+        );
+  }
+
 }

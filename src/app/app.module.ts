@@ -20,7 +20,7 @@ import { CollaborationComponent } from './collaboration/collaboration.component'
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [CollaborationComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
