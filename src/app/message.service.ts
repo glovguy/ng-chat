@@ -17,8 +17,21 @@ export class MessageService {
           );
   }
 
-  newMessage(message:any, successCallback, failureCallback) {
-    this.http.post(`/chat/messages`, message)
+  newMessage(value, successCallback, failureCallback) {
+    var myj = {
+      data: {
+        attributes: {
+          body: value
+        }
+      }
+    }
+    this.http.post(`/chat/messages`, {
+      data: {
+        attributes: {
+          body: value
+        }
+      }
+    })
     .map(resp => resp.json())
     .subscribe(
         (data) => successCallback(data),

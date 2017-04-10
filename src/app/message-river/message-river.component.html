@@ -1,8 +1,8 @@
-<ng-container *ngFor="let message of messages">
+<ng-container *ngFor="let message of messages | orderMessages">
 	<br/>
 		<div class='alert {{message["style"]}}'>
 			<div class='message_text'>
-				{{message['content']}}
+				{{message['body']}}
 			</div>
 
 			<div class='pull-right sender_indicator col-md-1'>

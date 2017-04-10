@@ -12,28 +12,30 @@ import { MessageService } from '../message.service';
 })
 export class ClientComponent implements OnInit {
   @Input('collabMod') collabMod: CollaborationComponent;
-  
+  field_value:string = '';
+
   constructor(collaboration: CollaborationComponent,
               private MessageService: MessageService,
               private ng2cable: Ng2Cable,
-              private broadcaster: Broadcaster) { 
+              private broadcaster: Broadcaster) {
   }
 
   ngOnInit() {
   }
   thisiswhatIgot = '';
 
-  sendMessage(value: string) { 
-    this.thisiswhatIgot = value;
+  sendMessage(value: string) {
     this.collabMod.addRegex(value);
-    var message = {};
-    message['content'] = value;
-    this.MessageService.newMessage({'message': message}, this.printOut, this.printOut);
+    this.MessageService.newMessage(value, this.messageSuccess, this.printOut);
   }
 
   printOut = (data) => {
     console.log(data);
   }
 
+  messageSuccess = (data) => {
+    console.log('success');
+    this.field_value = null;
+  }
 
 }
