@@ -1,6 +1,7 @@
 <ng-container *ngFor="let message of messages | orderMessages">
 	<br/>
-		<div class='alert {{message["style"]}}'>
+		<div *ngIf="message['style']=='user'" class='col-md-1'></div>
+		<div class='alert {{message["style"]}} col-md-11'>
 			<div class='message_text'>
 				{{message['body']}}
 			</div>
@@ -9,4 +10,5 @@
 				{{message['sender']}}
 			</div>
 		</div>
+		<div *ngIf="message['style']!='user'" class='col-md-1'></div>
 </ng-container>
