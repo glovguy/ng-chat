@@ -1,14 +1,18 @@
 <ng-container *ngFor="let message of messages | orderMessages">
 	<br/>
-		<div *ngIf="message['style']=='user'" class='col-md-1'></div>
+	<div class="clearfix">
+		<div [hidden]="message.style!='user'" class='col-md-1'></div>
 		<div class='alert {{message["style"]}} col-md-11'>
 			<div class='message_text'>
 				{{message['body']}}
 			</div>
 
 			<div class='pull-right sender_indicator col-md-1'>
-				{{message['sender']}}
+				<!-- {{message['sender']}} -->
+				{{message.style}}
+				{{message.style==='user'}}
 			</div>
 		</div>
-		<div *ngIf="message['style']!='user'" class='col-md-1'></div>
+		<div [hidden]="message.style=='user'" class='col-md-1'></div>
+	</div>
 </ng-container>
