@@ -8,9 +8,7 @@
 			</div>
 
 			<div class='pull-right sender_indicator col-md-1'>
-				<!-- {{message['sender']}} -->
-				{{message.style}}
-				{{message.style==='user'}}
+				{{message['sender']}}
 			</div>
 		</div>
 		<div [hidden]="message.style=='user'" class='col-md-1'></div>

@@ -26,15 +26,14 @@ export class ClientComponent implements OnInit {
 
   sendMessage(value: string) {
     this.collabMod.addRegex(value);
-    this.MessageService.newMessage(value, this.messageSuccess, this.printOut);
+    this.MessageService.createMessage(value, this.messageSuccess, this.printOut);
   }
 
   printOut = (data) => {
-    console.log(data);
+    console.log(data.responseText);
   }
 
   messageSuccess = (data) => {
-    console.log('success');
     this.field_value = null;
   }
 

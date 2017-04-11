@@ -17,7 +17,7 @@ export class MessageService {
           );
   }
 
-  newMessage(value, successCallback, failureCallback) {
+  createMessage(value, successCallback, failureCallback) {
     var myj = {
       data: {
         attributes: {
