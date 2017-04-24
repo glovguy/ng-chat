@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Ng2Cable, Broadcaster } from 'ng2-cable/js/index';
 
-import { MessageService } from '../message.service';
+import { MessageService } from '../../services/message.service';
 
 @Component({
   selector: 'app-message-river',

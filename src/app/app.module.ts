@@ -4,10 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ClientComponent } from './client/client.component';
-import { MessageRiverComponent } from './message-river/message-river.component';
-import { CollaborationComponent } from './collaboration/collaboration.component';
-import { OrderMessagesPipe } from './order-messages.pipe';
+import { ClientComponent } from './components/client/client.component';
+import { MessageRiverComponent } from './components/message-river/message-river.component';
+import { CollaborationComponent } from './components/collaboration/collaboration.component';
+import { OrderMessagesPipe } from './pipes/order-messages.pipe';
 
 @NgModule({
   declarations: [

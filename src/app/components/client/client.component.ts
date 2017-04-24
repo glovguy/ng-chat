@@ -2,7 +2,7 @@ import { Component, ViewChild, OnInit, Output, Input, EventEmitter } from '@angu
 import { Ng2Cable, Broadcaster } from 'ng2-cable/js/index';
 
 import { CollaborationComponent } from '../collaboration/collaboration.component';
-import { MessageService } from '../message.service';
+import { MessageService } from '../../services/message.service';
 
 @Component({
   selector: 'app-client',
