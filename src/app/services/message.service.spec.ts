@@ -3,10 +3,11 @@
 import { TestBed, async, inject } from '@angular/core/testing';
 import { BaseRequestOptions, Http, HttpModule, Response, ResponseOptions } from '@angular/http';
 import { MockBackend, MockConnection } from '@angular/http/testing';
+import { Observable } from 'rxjs/Rx';
 import { MessageService } from './message.service';
 
 
-fdescribe('MessageService', () => {
+describe('MessageService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpModule],
@@ -67,7 +68,7 @@ fdescribe('MessageService', () => {
     this.mockBackend.verifyNoPendingRequests();
   });
 
-  it('should fetch messages JSON from /chat/messages', inject([MessageService], (service: MessageService) => {
+  it('should fetch messages JSON', inject([MessageService], (service: MessageService) => {
     const mockResp = new Response(new ResponseOptions({ status: 200, body: this.sampleMessages }));
     this.mockBackend.connections.subscribe((connection) => {
       expect(connection.request.url).toEqual('/chat/messages');
@@ -90,5 +91,34 @@ fdescribe('MessageService', () => {
     this.service.getMessages(this.successCallback, this.failureCallback);
 
     expect(this.failureCallback).toHaveBeenCalled();
+  }));
+
+  it('should post to API to make a new message', inject([MessageService], (service: MessageService) => {
+    const mockResp = new Response(new ResponseOptions({ status: 200, body: this.sampleMessages }));
+    this.mockBackend.connections.subscribe((connection) => {
+      expect(connection.request.url).toEqual('/chat/messages');
+      connection.mockRespond(mockResp);
+    });
+    const messagePost = { data: { attributes: { body: 'new message' } } };
+    const mockCallback = { 'status': 200, 'data': { 'success': 'message sent' } };
+    spyOn(this.service.http, 'post').and.returnValue(Observable.of(mockCallback));
+
+    this.service.createMessage('new message', this.successCallback, this.failureCallback);
+
+    expect(this.service.http.post).toHaveBeenCalledWith('/chat/messages', messagePost);
+  }));
+
+  it('should call the success callback function after successful post new message', inject([MessageService], (service: MessageService) => {
+    const mockResp = new Response(new ResponseOptions({ status: 200, body: this.sampleMessages }));
+    this.mockBackend.connections.subscribe((connection) => {
+      expect(connection.request.url).toEqual('/chat/messages');
+      connection.mockRespond(mockResp);
+    });
+    const messagePost = { data: { attributes: { body: 'new message' } } };
+    const mockCallback = { 'status': 200, 'data': { 'success': 'message sent' } };
+
+    this.service.createMessage('new message', this.successCallback, this.failureCallback);
+
+    expect(this.successCallback).toHaveBeenCalled();
   }));
 });
