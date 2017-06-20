@@ -7,7 +7,7 @@ import { MessageService } from '../../services/message.service';
   selector: 'app-message-river',
   templateUrl: './message-river.component.html',
   styleUrls: ['./message-river.component.scss'],
-  providers: [MessageService, Ng2Cable, Broadcaster]
+  providers: [ MessageService, Ng2Cable, Broadcaster ]
 })
 export class MessageRiverComponent implements OnInit {
 
