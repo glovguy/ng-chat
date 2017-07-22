@@ -3,10 +3,6 @@ import { TestBed, async, inject } from '@angular/core/testing';
 import { OrderMessagesPipe } from './order-messages.pipe';
 import { Http } from '@angular/http';
 
-@NgModule({
-    imports: [HttpModule]
-})
-
 describe('The chat receives message history from the server', () => {
   let messagesJson = [
       {

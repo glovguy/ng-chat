@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Ng2Cable, Broadcaster } from 'ng2-cable/js/index';
+import { Ng2Cable, Broadcaster } from 'ng2-cable';
 
 import { MessageService } from '../../services/message.service';
 

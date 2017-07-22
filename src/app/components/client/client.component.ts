@@ -1,5 +1,5 @@
 import { Component, ViewChild, OnInit, Output, Input, EventEmitter } from '@angular/core';
-import { Ng2Cable, Broadcaster } from 'ng2-cable/js/index';
+import { Ng2Cable, Broadcaster } from 'ng2-cable';
 
 import { CollaborationComponent } from '../collaboration/collaboration.component';
 import { MessageService } from '../../services/message.service';
