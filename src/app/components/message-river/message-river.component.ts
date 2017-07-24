@@ -19,7 +19,7 @@ export class MessageRiverComponent implements OnInit {
 
   ngOnInit() {
     this.getMessages();
-    this.ng2cable.subscribe('http://localhost:3000/cable', 'ChatChannel');
+    this.ng2cable.subscribe('/cable', 'ChatChannel');
 
     this.broadcaster.on<Object>('newMessage').subscribe(
       msg => {
