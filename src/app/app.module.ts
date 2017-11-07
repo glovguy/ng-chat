@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { ClientComponent } from './components/client/client.component';
 import { MessageRiverComponent } from './components/message-river/message-river.component';
 import { CollaborationComponent } from './components/collaboration/collaboration.component';
-import { OrderMessagesPipe } from './pipes/order-messages.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +14,6 @@ import { OrderMessagesPipe } from './pipes/order-messages.pipe';
     ClientComponent,
     MessageRiverComponent,
     CollaborationComponent,
-    OrderMessagesPipe,
   ],
   imports: [
     BrowserModule,

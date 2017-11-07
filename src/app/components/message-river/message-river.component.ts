@@ -11,7 +11,7 @@ import { MessageService } from '../../services/message.service';
 })
 export class MessageRiverComponent implements OnInit {
 
-  messages: Object;
+  messages: Array<Object>;
 
   constructor(private MessageService: MessageService,
               private ng2cable: Ng2Cable,
@@ -21,24 +21,24 @@ export class MessageRiverComponent implements OnInit {
     this.getMessages();
     this.ng2cable.subscribe('/cable', 'ChatChannel');
 
-    this.broadcaster.on<Object>('newMessage').subscribe(
-      msg => {
-        var msgID = Object.keys(this.messages).length;
-        this.messages[msgID] = msg;
-      }
-    );
+    this.broadcaster.on<Object>('newMessage').subscribe(this.singleMessageLoaded);
   }
 
   getMessages(): void {
-    this.MessageService.getMessages(this.messagesLoaded, this.messageLoadFailure);
+    this.MessageService.getMessages(this.messagesLoaded, null);
   }
 
-  messagesLoaded = (data) => {
-    this.messages = data;
+  messagesLoaded = (data: Array<Object>) => {
+    this.messages = data.sort(this.messageSort);
   }
 
-  messageLoadFailure = (error) => {
-    return error;
+  singleMessageLoaded = (msg) => {
+    this.messages.unshift(msg);
   }
 
+  messageSort(a,b) {
+    if (a['id'] < b['id']) return 1;
+    if (a['id'] > b['id']) return -1;
+    return 0;
+  }
 }

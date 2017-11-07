@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { Component, ViewChild, Output, Input, EventEmitter } from '@angular/core';
 import { Ng2Cable, Broadcaster } from 'ng2-cable';
 
 import { CollaborationComponent } from '../collaboration/collaboration.component';
@@ -10,7 +10,7 @@ import { MessageService } from '../../services/message.service';
   styleUrls: ['./client.component.css'],
   providers: [Ng2Cable, Broadcaster, MessageService]
 })
-export class ClientComponent implements OnInit {
+export class ClientComponent {
   @Input('collabMod') collabMod: CollaborationComponent;
   field_value:string = '';
 
@@ -20,21 +20,13 @@ export class ClientComponent implements OnInit {
               private broadcaster: Broadcaster) {
   }
 
-  ngOnInit() {
-  }
   thisiswhatIgot = '';
 
   sendMessage(value: string) {
-    this.collabMod.addRegex(value);
-    this.MessageService.createMessage(value, this.messageSuccess, this.printOut);
-  }
-
-  printOut = (data) => {
-    console.log(data.responseText);
+    this.MessageService.createMessage(value, this.messageSuccess, null);
   }
 
   messageSuccess = (data) => {
     this.field_value = null;
   }
-
 }

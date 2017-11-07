@@ -8,5 +8,5 @@ import { ClientComponent } from './components/client/client.component'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Chat Bots';
+  title = 'Sandwich Bot';
 }
