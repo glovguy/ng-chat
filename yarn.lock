@@ -137,81 +137,30 @@
     magic-string "^0.22.3"
     source-map "^0.5.6"
 
-"@pact-foundation/pact-mock-service-darwin@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@pact-foundation/pact-mock-service-darwin/-/pact-mock-service-darwin-2.1.0.tgz#4be4730ecea853e080425e5e55124aa1df09806e"
+"@pact-foundation/pact-node@^6.7.0":
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/@pact-foundation/pact-node/-/pact-node-6.7.0.tgz#c11b76f4b43f3531cebd0b2b47790e1cd57c5052"
+  dependencies:
+    "@pact-foundation/pact-standalone" "~3.4.0"
+    bunyan "1.8.12"
+    bunyan-prettystream "0.1.3"
+    check-types "7.3.0"
+    mkdirp "0.5.1"
+    q "1.5.0"
+    request "2.81.0"
+    traverson "6.0.3"
+    traverson-hal "6.0.0"
+    traverson-promise "0.0.9"
+    underscore "1.8.3"
+    unixify "1.0.0"
+    url-join "2.0.2"
 
-"@pact-foundation/pact-mock-service-linux-ia32@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@pact-foundation/pact-mock-service-linux-ia32/-/pact-mock-service-linux-ia32-2.1.0.tgz#bd20277751c3b2af2459c7663802802a369cd54c"
-
-"@pact-foundation/pact-mock-service-linux-x64@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@pact-foundation/pact-mock-service-linux-x64/-/pact-mock-service-linux-x64-2.1.0.tgz#78e9c2319e291407d6eef59084f4adea2525c442"
-
-"@pact-foundation/pact-mock-service-win32@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@pact-foundation/pact-mock-service-win32/-/pact-mock-service-win32-2.1.0.tgz#1d37e22315701d3cc9a38848bdd809abff53e371"
-
-"@pact-foundation/pact-mock-service@~2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@pact-foundation/pact-mock-service/-/pact-mock-service-2.1.0.tgz#9d84b229742601bb4ad4650852d469a49850d616"
+"@pact-foundation/pact-standalone@~3.4.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@pact-foundation/pact-standalone/-/pact-standalone-3.4.0.tgz#9acbb9459b073f777fec0ae9d8f889f1e9f4164a"
   dependencies:
     bunyan "^1.8.0"
     bunyan-prettystream "^0.1.3"
-  optionalDependencies:
-    "@pact-foundation/pact-mock-service-darwin" "2.1.0"
-    "@pact-foundation/pact-mock-service-linux-ia32" "2.1.0"
-    "@pact-foundation/pact-mock-service-linux-x64" "2.1.0"
-    "@pact-foundation/pact-mock-service-win32" "2.1.0"
-
-"@pact-foundation/pact-node@^4.12.0":
-  version "4.12.0"
-  resolved "https://registry.yarnpkg.com/@pact-foundation/pact-node/-/pact-node-4.12.0.tgz#dea8e9b61cca382ce0215eed42d21773cc600dad"
-  dependencies:
-    "@pact-foundation/pact-mock-service" "~2.1.0"
-    "@pact-foundation/pact-provider-verifier" "~1.4.0"
-    bunyan "^1.8.10"
-    bunyan-prettystream "^0.1.3"
-    check-types "~7.1.5"
-    commander "^2.9.0"
-    mkdirp "^0.5.1"
-    q "^1.5.0"
-    request "^2.81.0"
-    traverson "^6.0.3"
-    traverson-hal "^6.0.0"
-    traverson-promise "0.0.8"
-    underscore "^1.8.3"
-    unixify "^1.0.0"
-    url-join "^2.0.1"
-
-"@pact-foundation/pact-provider-verifier-darwin@1.4.3":
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/@pact-foundation/pact-provider-verifier-darwin/-/pact-provider-verifier-darwin-1.4.3.tgz#e9ff8b2f58fe402382b8eb103d22d5afd16c67d5"
-
-"@pact-foundation/pact-provider-verifier-linux-ia32@1.4.3":
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/@pact-foundation/pact-provider-verifier-linux-ia32/-/pact-provider-verifier-linux-ia32-1.4.3.tgz#85fb3c152da6d7fa46efcc1f8c14f66c0e9eba84"
-
-"@pact-foundation/pact-provider-verifier-linux-x64@1.4.3":
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/@pact-foundation/pact-provider-verifier-linux-x64/-/pact-provider-verifier-linux-x64-1.4.3.tgz#64c6d5d8d124f97d5b440f2c090ab5e2367f6236"
-
-"@pact-foundation/pact-provider-verifier-win32@1.4.3":
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/@pact-foundation/pact-provider-verifier-win32/-/pact-provider-verifier-win32-1.4.3.tgz#52ba90d478e5266950a58662dd51dcfa4f88c466"
-
-"@pact-foundation/pact-provider-verifier@~1.4.0":
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/@pact-foundation/pact-provider-verifier/-/pact-provider-verifier-1.4.3.tgz#8884c4b22aef1516c263e0def974ac00e9415570"
-  dependencies:
-    bunyan "^1.8.0"
-    bunyan-prettystream "^0.1.3"
-  optionalDependencies:
-    "@pact-foundation/pact-provider-verifier-darwin" "1.4.3"
-    "@pact-foundation/pact-provider-verifier-linux-ia32" "1.4.3"
-    "@pact-foundation/pact-provider-verifier-linux-x64" "1.4.3"
-    "@pact-foundation/pact-provider-verifier-win32" "1.4.3"
 
 "@types/actioncable@0.0.2":
   version "0.0.2"
@@ -829,11 +778,11 @@ builtin-status-codes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
 
-bunyan-prettystream@^0.1.3:
+bunyan-prettystream@0.1.3, bunyan-prettystream@^0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/bunyan-prettystream/-/bunyan-prettystream-0.1.3.tgz#6c3b713266f6ad32007c7b6ab1e998a245349d98"
 
-bunyan@^1.8.0, bunyan@^1.8.10:
+bunyan@1.8.12, bunyan@^1.8.0:
   version "1.8.12"
   resolved "https://registry.yarnpkg.com/bunyan/-/bunyan-1.8.12.tgz#f150f0f6748abdd72aeae84f04403be2ef113797"
   optionalDependencies:
@@ -930,9 +879,9 @@ chalk@^2.0.0, chalk@^2.0.1:
     escape-string-regexp "^1.0.5"
     supports-color "^4.0.0"
 
-check-types@~7.1.5:
-  version "7.1.5"
-  resolved "https://registry.yarnpkg.com/check-types/-/check-types-7.1.5.tgz#a1d6b9d2fa3e7e80e3a2d373ffcc2cf10b7370c9"
+check-types@7.3.0:
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/check-types/-/check-types-7.3.0.tgz#468f571a4435c24248f5fd0cb0e8d87c3c341e7d"
 
 chokidar@^1.4.1, chokidar@^1.6.0:
   version "1.6.1"
@@ -1115,10 +1064,6 @@ commander@2.9.x:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.9.0.tgz#9c99094176e12240cb22d6c5146098400fe0f7d4"
   dependencies:
     graceful-readlink ">= 1.0.0"
-
-commander@^2.9.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.11.0.tgz#157152fd1e7a6c8d98a5b715cf376df928004563"
 
 common-tags@^1.3.1:
   version "1.4.0"
@@ -2189,14 +2134,6 @@ forever-agent@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
 
-form-data@1.0.0-rc4:
-  version "1.0.0-rc4"
-  resolved "https://registry.yarnpkg.com/form-data/-/form-data-1.0.0-rc4.tgz#05ac6bc22227b43e4461f488161554699d4f8b5e"
-  dependencies:
-    async "^1.5.2"
-    combined-stream "^1.0.5"
-    mime-types "^2.1.10"
-
 form-data@^2.1.1, form-data@~2.1.1:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/form-data/-/form-data-2.1.4.tgz#33c183acf193276ecaa98143a69e94bfee1750d1"
@@ -2205,7 +2142,7 @@ form-data@^2.1.1, form-data@~2.1.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
-formidable@^1.0.17, formidable@^1.1.1:
+formidable@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/formidable/-/formidable-1.1.1.tgz#96b8886f7c3c3508b932d6bd70c4d3a88f35f1a9"
 
@@ -3202,10 +3139,6 @@ jsonify@~0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
 
-jsonpath-plus@^0.15.0:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/jsonpath-plus/-/jsonpath-plus-0.15.0.tgz#b6051c109f5ad2ca6c3b01bb135da82dc37c0149"
-
 jsonpath-plus@^0.16.0:
   version "0.16.0"
   resolved "https://registry.yarnpkg.com/jsonpath-plus/-/jsonpath-plus-0.16.0.tgz#fe441b23f03ec6979a5603513988cd3edb7db5dc"
@@ -3677,7 +3610,7 @@ mime-db@~1.12.0:
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.12.0.tgz#3d0c63180f458eb10d325aaa37d7c58ae312e9d7"
 
-mime-types@^2.1.10, mime-types@^2.1.12, mime-types@~2.1.11, mime-types@~2.1.15, mime-types@~2.1.7:
+mime-types@^2.1.12, mime-types@~2.1.11, mime-types@~2.1.15, mime-types@~2.1.7:
   version "2.1.15"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.15.tgz#a4ebf5064094569237b8cf70046776d09fc92aed"
   dependencies:
@@ -3749,7 +3682,7 @@ mixin-object@^2.0.1:
     for-in "^0.1.3"
     is-extendable "^0.1.1"
 
-mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
+mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
@@ -4689,7 +4622,7 @@ q@1.4.1, q@^1.1.2, q@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.4.1.tgz#55705bcd93c5f3673530c2c2cbc0c2b3addc286e"
 
-q@^1.5.0:
+q@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.0.tgz#dd01bac9d06d30e6f219aecb8253ee9ebdc308f1"
 
@@ -4956,7 +4889,7 @@ replace-ext@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/replace-ext/-/replace-ext-0.0.1.tgz#29bbd92078a739f0bcce2b4ee41e837953522924"
 
-request@2, request@^2.28.0, request@^2.72.0, request@^2.78.0, request@^2.79.0, request@^2.81.0:
+request@2, request@2.81.0, request@^2.28.0, request@^2.72.0, request@^2.78.0, request@^2.79.0, request@^2.81.0:
   version "2.81.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.81.0.tgz#c6928946a0e06c5f8d6f8a9333469ffda46298a0"
   dependencies:
@@ -5597,21 +5530,6 @@ stylus@^0.54.5:
     sax "0.5.x"
     source-map "0.1.x"
 
-superagent@^2.0.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/superagent/-/superagent-2.3.0.tgz#703529a0714e57e123959ddefbce193b2e50d115"
-  dependencies:
-    component-emitter "^1.2.0"
-    cookiejar "^2.0.6"
-    debug "^2.2.0"
-    extend "^3.0.0"
-    form-data "1.0.0-rc4"
-    formidable "^1.0.17"
-    methods "^1.1.1"
-    mime "^1.3.4"
-    qs "^6.1.0"
-    readable-stream "^2.0.5"
-
 superagent@^3.3.1:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/superagent/-/superagent-3.5.2.tgz#3361a3971567504c351063abeaae0faa23dbf3f8"
@@ -5768,32 +5686,20 @@ tough-cookie@~2.3.0:
   dependencies:
     punycode "^1.4.1"
 
-traverson-hal@^6.0.0:
+traverson-hal@6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/traverson-hal/-/traverson-hal-6.0.0.tgz#253935fd69568de0655844875c7f87432991526c"
   dependencies:
     halfred "1.0.0"
 
-traverson-promise@0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/traverson-promise/-/traverson-promise-0.0.8.tgz#1018a088936e4f1fd7564d178f1b2d1d773a9515"
+traverson-promise@0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/traverson-promise/-/traverson-promise-0.0.9.tgz#fe50b76a296115d00c5bf26bdde08368f5d3a97d"
   dependencies:
     bluebird "^3.4.6"
-    traverson "^5.0.0"
+    traverson "6.0.3"
 
-traverson@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/traverson/-/traverson-5.0.0.tgz#29e84afef896456bfdd0176244d1340c25c6082b"
-  dependencies:
-    jsonpath-plus "^0.15.0"
-    minilog "^3.0.0"
-    request "^2.28.0"
-    resolve-url "^0.2.1"
-    superagent "^2.0.0"
-    underscore.string "^3.3.4"
-    url-template "^2.0.4"
-
-traverson@^6.0.3:
+traverson@6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/traverson/-/traverson-6.0.3.tgz#5bca61ab73401dca664579a4eb2b851f647bf2da"
   dependencies:
@@ -5956,7 +5862,7 @@ underscore.string@^3.3.4:
     sprintf-js "^1.0.3"
     util-deprecate "^1.0.2"
 
-underscore@^1.8.3:
+underscore@1.8.3:
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.8.3.tgz#4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022"
 
@@ -5984,7 +5890,7 @@ universalify@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.1.tgz#fa71badd4437af4c148841e3b3b165f9e9e590b7"
 
-unixify@^1.0.0:
+unixify@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unixify/-/unixify-1.0.0.tgz#3a641c8c2ffbce4da683a5c70f03a462940c2090"
   dependencies:
@@ -6015,7 +5921,7 @@ upper-case@^1.1.1:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/upper-case/-/upper-case-1.1.3.tgz#f6b4501c2ec4cdd26ba78be7222961de77621598"
 
-url-join@^2.0.1:
+url-join@2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/url-join/-/url-join-2.0.2.tgz#c072756967ad24b8b59e5741551caac78f50b8b7"
 
