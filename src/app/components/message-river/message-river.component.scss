@@ -1,7 +1,5 @@
 .sender_indicator {
-    text-align: right;
-    position: relative;
-    top: -25px;
+    margin: 4px;
 }
 
 .message_text {
@@ -12,10 +10,12 @@
     color: #31708f;
     background-color: #d9edf7;
     border-color: #bce8f1;
+    margin-right: 60px;
 }
 
 .user {
     color: #3c763d;
     background-color: #dff0d8;
     border-color: #d6e9c6;
+    margin-left: 60px;
 }

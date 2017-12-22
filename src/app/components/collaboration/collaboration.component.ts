@@ -11,7 +11,7 @@ export class CollaborationComponent implements OnInit {
   collaborationText: string;
 
   ngOnInit() {
-    let collaborationText = '';
+    this.collaborationText = '<span class="glyphicon glyphicon-info-sign"></span> Sandwich bot is here for all of your sandwich identification needs.<br /> Just send it the name of a food item, and it will tell you if it is a sandwich or not.';
   }
 
   replace(txt: string, search: string) {

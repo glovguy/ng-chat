@@ -17,6 +17,14 @@ export class MessageRiverComponent implements OnInit {
               private ng2cable: Ng2Cable,
               private broadcaster: Broadcaster) { }
 
+  userStyle(message): boolean {
+    return message["style"]=='user'
+  }
+
+  botStyle(message): boolean {
+    return message["style"]=='bot'
+  }
+
   ngOnInit() {
     this.getMessages();
     this.ng2cable.subscribe('/cable', 'ChatChannel');

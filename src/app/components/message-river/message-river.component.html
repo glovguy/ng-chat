@@ -1,16 +1,12 @@
 <ng-container *ngFor="let message of messages">
 	<br/>
 	<div class="clearfix">
-		<div [hidden]="message.style!='user'" class='col-md-1'></div>
-		<div class='alert {{message["style"]}} col-md-11'>
-			<div class='message_text'>
-				{{message['body']}}
-			</div>
-
-			<div class='pull-right sender_indicator col-md-1'>
-				{{message['sender']}}
-			</div>
+		<div class='alert {{message["style"]}}'>
+				<span class='message_text'>
+				{{message['body']}}</span>
+				<span class="pull-right sender_indicator glyphicon"
+							[ngClass]="{ 'glyphicon-user': userStyle(message), 'glyphicon-comment': botStyle(message) }">
+				</span>
 		</div>
-		<div [hidden]="message.style=='user'" class='col-md-1'></div>
 	</div>
 </ng-container>
