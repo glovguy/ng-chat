@@ -27,7 +27,7 @@ export class MessageRiverComponent implements OnInit {
 
   ngOnInit() {
     this.getMessages();
-    this.ng2cable.subscribe('/cable', 'ChatChannel');
+    this.ng2cable.subscribe('/cable', 'ChatChannel', {'bot_name': 'sandwich', 'bot_id': 1});
 
     this.broadcaster.on<Object>('newMessage').subscribe(this.singleMessageLoaded);
   }
