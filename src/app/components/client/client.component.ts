@@ -12,7 +12,7 @@ import { MessageService } from '../../services/message.service';
 })
 export class ClientComponent {
   @Input('collabMod') collabMod: CollaborationComponent;
-  field_value:string = '';
+  fieldValue: string = '';
 
   constructor(collaboration: CollaborationComponent,
               private MessageService: MessageService,
@@ -20,13 +20,11 @@ export class ClientComponent {
               private broadcaster: Broadcaster) {
   }
 
-  thisiswhatIgot = '';
-
   sendMessage(value: string) {
     this.MessageService.createMessage(value, this.messageSuccess, null);
   }
 
   messageSuccess = (data) => {
-    this.field_value = null;
+    this.fieldValue = '';
   }
 }
