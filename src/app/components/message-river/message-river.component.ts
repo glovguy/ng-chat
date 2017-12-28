@@ -27,8 +27,10 @@ export class MessageRiverComponent implements OnInit {
 
   ngOnInit() {
     this.getMessages();
-    this.ng2cable.subscribe('/cable', 'ChatChannel', {'bot_name': 'sandwich', 'bot_id': 1});
+  }
 
+  initActionCable(chat_stream_id: string): void {
+    this.ng2cable.subscribe('/cable', 'ChatChannel', { 'chat_stream_id': chat_stream_id });
     this.broadcaster.on<Object>('newMessage').subscribe(this.singleMessageLoaded);
   }
 
@@ -37,16 +39,21 @@ export class MessageRiverComponent implements OnInit {
   }
 
   messagesLoaded = (data: Array<Object>) => {
-    this.messages = data.sort(this.messageSort);
+    this.messages = this.sortMessagesById(data);
+    const chat_stream_id = this.messages[0]['chat_stream_id']
+    console.log('messages:', this.messages);
+    this.initActionCable(chat_stream_id);
   }
 
   singleMessageLoaded = (msg) => {
     this.messages.unshift(msg);
   }
 
-  messageSort(a,b) {
-    if (a['id'] < b['id']) return 1;
-    if (a['id'] > b['id']) return -1;
-    return 0;
+  sortMessagesById(messages): Array<Object> {
+    return messages.sort((a,b) => {
+      if (a['id'] < b['id']) return 1;
+      if (a['id'] > b['id']) return -1;
+      return 0;
+    });
   }
 }
