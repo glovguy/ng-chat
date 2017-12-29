@@ -41,7 +41,6 @@ export class MessageRiverComponent implements OnInit {
   messagesLoaded = (data: Array<Object>) => {
     this.messages = this.sortMessagesById(data);
     const chat_stream_id = this.messages[0]['chat_stream_id']
-    console.log('messages:', this.messages);
     this.initActionCable(chat_stream_id);
   }
 

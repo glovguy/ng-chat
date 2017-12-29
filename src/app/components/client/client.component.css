@@ -1,0 +1,9 @@
+.sender_indicator {
+  text-align: right;
+  position: relative;
+  right: 10px;
+}
+
+.message_text {
+  font-size: 1.5em;
+}
