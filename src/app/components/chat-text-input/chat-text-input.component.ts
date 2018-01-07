@@ -5,12 +5,12 @@ import { CollaborationComponent } from '../collaboration/collaboration.component
 import { MessageService } from '../../services/message.service';
 
 @Component({
-  selector: 'app-client',
-  templateUrl: './client.component.html',
-  styleUrls: ['./client.component.css'],
+  selector: 'app-chat-text-input',
+  templateUrl: './chat-text-input.component.html',
+  styleUrls: ['./chat-text-input.component.css'],
   providers: [Ng2Cable, Broadcaster, MessageService]
 })
-export class ClientComponent {
+export class ChatTextInputComponent {
   @Input('collabMod') collabMod: CollaborationComponent;
   @ViewChild('inputElement') inputElement: ElementRef;
   fieldValue: string = '';

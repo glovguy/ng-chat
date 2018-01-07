@@ -4,14 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ClientComponent } from './components/client/client.component';
+import { ChatTextInputComponent } from './components/chat-text-input/chat-text-input.component';
 import { MessageRiverComponent } from './components/message-river/message-river.component';
 import { CollaborationComponent } from './components/collaboration/collaboration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClientComponent,
+    ChatTextInputComponent,
     MessageRiverComponent,
     CollaborationComponent,
   ],

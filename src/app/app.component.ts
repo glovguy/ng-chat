@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ClientComponent } from './components/client/client.component'
+import { ChatTextInputComponent } from './components/chat-text-input/chat-text-input.component'
 
 @Component({
   selector: 'app-root',

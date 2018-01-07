@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { ClientComponent } from './client.component';
+import { ChatTextInputComponent } from './chat-text-input.component';
 
-describe('ClientComponent', () => {
-  let component: ClientComponent;
-  let fixture: ComponentFixture<ClientComponent>;
+describe('ChatTextInputComponent', () => {
+  let component: ChatTextInputComponent;
+  let fixture: ComponentFixture<ChatTextInputComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ClientComponent ]
+      declarations: [ ChatTextInputComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ClientComponent);
+    fixture = TestBed.createComponent(ChatTextInputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
