@@ -23,7 +23,7 @@ export class ClientComponent {
   }
 
   sendMessage(value: string) {
-    if (this.messageIsSending) return;
+    if (this.messageIsSending || value.length < 2) return;
     this.messageIsSending = true;
     this.MessageService.createMessage(value, this.messageSendSuccess, this.messageSendFailure);
   }
