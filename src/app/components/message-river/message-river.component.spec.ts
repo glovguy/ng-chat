@@ -95,7 +95,7 @@ describe('MessageRiverComponent', () => {
     ];
 
     it('orders the incoming messages', () => {
-      const msgOut = messagesJson.sort(component.messageSort);
+      const msgOut = component.sortMessagesById(messagesJson);
       expect(msgOut).toEqual(sortedMessagesJson);
     });
   });

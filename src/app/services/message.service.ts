@@ -38,4 +38,13 @@ export class MessageService {
         (error) => failureCallback(error)
         );
   }
+
+  getChatRoomStatus(id, successCallback, failureCallback): void {
+    this.http.get(`/api/chat_rooms/${id}`)
+    .map(resp => resp.json())
+    .subscribe(
+        (data) => successCallback(data),
+        (error) => failureCallback(error)
+        );
+  }
 }

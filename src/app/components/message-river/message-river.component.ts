@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Ng2Cable, Broadcaster } from 'ng2-cable';
 
 import { MessageService } from '../../services/message.service';
@@ -10,6 +10,8 @@ import { MessageService } from '../../services/message.service';
   providers: [ MessageService, Ng2Cable, Broadcaster ]
 })
 export class MessageRiverComponent implements OnInit {
+
+  @ViewChild('statusIndicator') statusIndicator: ElementRef;
 
   messages: Array<Object>;
 
@@ -27,6 +29,7 @@ export class MessageRiverComponent implements OnInit {
 
   ngOnInit() {
     this.getMessages();
+    this.MessageService.getChatRoomStatus(1, this.chatRoomStatusLoaded, this.chatRoomStatusFailure);
   }
 
   initActionCable(chat_stream_id: string): void {
@@ -46,6 +49,22 @@ export class MessageRiverComponent implements OnInit {
 
   singleMessageLoaded = (msg) => {
     this.messages.unshift(msg);
+  }
+
+  chatRoomStatusLoaded = (data: Array<Object>) => {
+    if (data['awake'] == true) {
+      this.setStatus('');
+    } else {
+      this.setStatus('There was an issue connecting...');
+    }
+  }
+
+  chatRoomStatusFailure = (data: Array<Object>) => {
+    this.setStatus('There is was an issue. Please refresh');
+  }
+
+  setStatus(text: string): void {
+    this.statusIndicator.nativeElement.innerText = text;
   }
 
   sortMessagesById(messages): Array<Object> {
