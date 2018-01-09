@@ -14,6 +14,7 @@ export class MessageRiverComponent implements OnInit {
   @ViewChild('statusIndicator') statusIndicator: ElementRef;
 
   messages: Array<Object>;
+  chat_stream_opened: boolean;
 
   constructor(private MessageService: MessageService,
               private ng2cable: Ng2Cable,
@@ -28,6 +29,7 @@ export class MessageRiverComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.chat_stream_opened = false;
     this.getMessages();
     this.MessageService.getChatRoomStatus(1, this.chatRoomStatusLoaded, this.chatRoomStatusFailure);
   }
@@ -35,6 +37,7 @@ export class MessageRiverComponent implements OnInit {
   initActionCable(chat_stream_id: string): void {
     this.ng2cable.subscribe('/cable', 'ChatChannel', { 'chat_stream_id': chat_stream_id });
     this.broadcaster.on<Object>('newMessage').subscribe(this.singleMessageLoaded);
+    this.chat_stream_opened = true;
   }
 
   getMessages(): void {
@@ -43,8 +46,9 @@ export class MessageRiverComponent implements OnInit {
 
   messagesLoaded = (data: Array<Object>) => {
     this.messages = this.sortMessagesById(data);
-    const chat_stream_id = this.messages[0]['chat_stream_id']
-    this.initActionCable(chat_stream_id);
+    if (this.messages.length > 0 && !this.chat_stream_opened) {
+      this.initActionCable(this.messages[0]['chat_stream_id']);
+    }
   }
 
   singleMessageLoaded = (msg) => {
@@ -54,6 +58,7 @@ export class MessageRiverComponent implements OnInit {
   chatRoomStatusLoaded = (data: Array<Object>) => {
     if (data['awake'] == true) {
       this.setStatus('');
+      if (!this.chat_stream_opened) this.initActionCable(data['chat_stream_id']);
     } else {
       this.setStatus('There was an issue connecting...');
     }
