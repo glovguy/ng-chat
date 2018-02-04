@@ -65,7 +65,7 @@ export class MessageRiverComponent implements OnInit {
   }
 
   chatRoomStatusFailure = (data: Array<Object>) => {
-    this.setStatus('There is was an issue. Please refresh');
+    this.setStatus('There was an issue. Please refresh');
   }
 
   setStatus(text: string): void {
