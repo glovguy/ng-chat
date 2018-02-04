@@ -15,18 +15,12 @@ export class MessageRiverComponent implements OnInit {
 
   messages: Array<Object>;
   chat_stream_opened: boolean;
+  adminView: boolean = false;
+  chatStreamIds: any;
 
   constructor(private MessageService: MessageService,
               private ng2cable: Ng2Cable,
               private broadcaster: Broadcaster) { }
-
-  userStyle(message): boolean {
-    return message["style"]=='user'
-  }
-
-  botStyle(message): boolean {
-    return message["style"]=='bot'
-  }
 
   ngOnInit() {
     this.chat_stream_opened = false;
@@ -49,6 +43,12 @@ export class MessageRiverComponent implements OnInit {
     if (this.messages.length > 0 && !this.chat_stream_opened) {
       this.initActionCable(this.messages[0]['chat_stream_id']);
     }
+    let allChatStreamIds = new Set();
+    for(let i in this.messages) {
+      allChatStreamIds.add(this.messages[i]['chat_stream_id']);
+    }
+    this.chatStreamIds = Array.from(allChatStreamIds);
+    if (allChatStreamIds.size > 1) this.adminView = true;
   }
 
   singleMessageLoaded = (msg) => {

@@ -1,0 +1,8 @@
+<div class="clearfix">
+  <div class='alert {{message["style"]}}'>
+      <span class='message_text'>
+      {{message['body']}}</span>
+      <span class="pull-right sender_indicator glyphicon" [ngClass]="{ 'glyphicon-user': userStyle(), 'glyphicon-comment': botStyle() }">
+      </span>
+  </div>
+</div>

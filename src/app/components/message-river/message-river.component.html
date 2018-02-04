@@ -1,13 +1,8 @@
 <span #statusIndicator>Loading...</span>
-<ng-container *ngFor="let message of messages">
-	<br/>
-	<div class="clearfix">
-		<div class='alert {{message["style"]}}'>
-				<span class='message_text'>
-				{{message['body']}}</span>
-				<span class="pull-right sender_indicator glyphicon"
-							[ngClass]="{ 'glyphicon-user': userStyle(message), 'glyphicon-comment': botStyle(message) }">
-				</span>
-		</div>
-	</div>
+<ng-container *ngFor="let chatStreamId of chatStreamIds">
+  <span *ngIf="adminView">Chat Stream Id: {{chatStreamId}}</span>
+  <ng-container *ngFor="let message of messages">
+    <br/>
+    <app-message [message]="message"></app-message>
+  </ng-container>
 </ng-container>

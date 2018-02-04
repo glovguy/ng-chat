@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ChatTextInputComponent } from './components/chat-text-input/chat-text-input.component';
 import { MessageRiverComponent } from './components/message-river/message-river.component';
 import { CollaborationComponent } from './components/collaboration/collaboration.component';
+import { MessageComponent } from './components/message/message.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { CollaborationComponent } from './components/collaboration/collaboration
     ChatTextInputComponent,
     MessageRiverComponent,
     CollaborationComponent,
+    MessageComponent,
   ],
   imports: [
     BrowserModule,
