@@ -3,6 +3,7 @@ import { Ng2Cable, Broadcaster } from 'ng2-cable';
 
 import { MessageService } from '../../services/message.service';
 
+
 @Component({
   selector: 'app-message-river',
   templateUrl: './message-river.component.html',
@@ -16,7 +17,6 @@ export class MessageRiverComponent implements OnInit {
   messages: Array<Object>;
   chat_stream_opened: boolean;
   adminView: boolean = false;
-  chatStreamIds: any;
 
   constructor(private MessageService: MessageService,
               private ng2cable: Ng2Cable,
@@ -43,12 +43,6 @@ export class MessageRiverComponent implements OnInit {
     if (this.messages.length > 0 && !this.chat_stream_opened) {
       this.initActionCable(this.messages[0]['chat_stream_id']);
     }
-    let allChatStreamIds = new Set();
-    for(let i in this.messages) {
-      allChatStreamIds.add(this.messages[i]['chat_stream_id']);
-    }
-    this.chatStreamIds = Array.from(allChatStreamIds);
-    if (allChatStreamIds.size > 1) this.adminView = true;
   }
 
   singleMessageLoaded = (msg) => {

@@ -1,8 +1,6 @@
 <span #statusIndicator>Loading...</span>
-<ng-container *ngFor="let chatStreamId of chatStreamIds">
   <span *ngIf="adminView">Chat Stream Id: {{chatStreamId}}</span>
   <ng-container *ngFor="let message of messages">
-    <br/>
-    <app-message [message]="message"></app-message>
-  </ng-container>
+  <br/>
+  <app-message [message]="message"></app-message>
 </ng-container>
