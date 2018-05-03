@@ -4362,9 +4362,9 @@ karma-cli@^1.0.1:
   dependencies:
     resolve "^1.1.6"
 
-karma-jasmine@^1.0.2:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/karma-jasmine/-/karma-jasmine-1.1.0.tgz#22e4c06bf9a182e5294d1f705e3733811b810acf"
+karma-jasmine@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/karma-jasmine/-/karma-jasmine-1.1.2.tgz#394f2b25ffb4a644b9ada6f22d443e2fd08886c3"
 
 karma-pact@0.0.7:
   version "0.0.7"
