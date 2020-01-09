@@ -3755,6 +3755,10 @@ jasmine-core@2.5.2:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-2.5.2.tgz#6f61bd79061e27f43e6f9355e44b3c6cab6ff297"
 
+jasmine-core@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-3.5.0.tgz#132c23e645af96d85c8bca13c8758b18429fc1e4"
+
 jasmine-core@~2.4.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-2.4.1.tgz#6f83ab3a0f16951722ce07d206c773d57cc838be"
@@ -4362,9 +4366,11 @@ karma-cli@^1.0.1:
   dependencies:
     resolve "^1.1.6"
 
-karma-jasmine@^1.0.2:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/karma-jasmine/-/karma-jasmine-1.1.0.tgz#22e4c06bf9a182e5294d1f705e3733811b810acf"
+karma-jasmine@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/karma-jasmine/-/karma-jasmine-3.0.3.tgz#751ae15d84d16e9148d0af42787fc12f5959f66d"
+  dependencies:
+    jasmine-core "^3.5.0"
 
 karma-pact@0.0.7:
   version "0.0.7"
