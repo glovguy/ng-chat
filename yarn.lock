@@ -1404,7 +1404,11 @@ colormin@^1.0.5:
     css-color-names "0.0.4"
     has "^1.0.1"
 
-colors@1.1.2, colors@^1.1.0, colors@^1.1.2, colors@~1.1.2:
+colors@1.4.0, colors@^1.1.0, colors@^1.1.2:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/colors/-/colors-1.4.0.tgz#c50491479d4c1bdaed2c9ced32cf7c7dc2360f78"
+
+colors@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.1.2.tgz#168a4701756b6a7f51a12ce0c97bfa28c084ed63"
 
@@ -3759,11 +3763,11 @@ jasmine-core@~2.4.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-2.4.1.tgz#6f83ab3a0f16951722ce07d206c773d57cc838be"
 
-jasmine-spec-reporter@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/jasmine-spec-reporter/-/jasmine-spec-reporter-2.5.0.tgz#12e4782e6445c0dfabb8def4c52edd30f6362d42"
+jasmine-spec-reporter@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/jasmine-spec-reporter/-/jasmine-spec-reporter-5.0.1.tgz#4d86dbffcf1326d5b1684f9c8cd4abbb6d76c2fe"
   dependencies:
-    colors "1.1.2"
+    colors "1.4.0"
 
 jasmine@2.4.1:
   version "2.4.1"
