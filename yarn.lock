@@ -225,7 +225,11 @@
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/@types/actioncable/-/actioncable-0.0.2.tgz#a1b2faa384438315dd33f210f188f623c2c8900c"
 
-"@types/jasmine@2.5.38", "@types/jasmine@^2.5.36":
+"@types/jasmine@3.5.13":
+  version "3.5.13"
+  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.5.13.tgz#f5d34d7f9d0ad15e7c17adbaf1ebfaca68a60f73"
+
+"@types/jasmine@^2.5.36":
   version "2.5.38"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.5.38.tgz#a4379124c4921d4e21de54ec74669c9e9b356717"
 
