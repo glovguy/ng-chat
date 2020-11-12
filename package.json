@@ -18,7 +18,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/cli": "^1.2.3",
+    "@angular/cli": "^11.0.0",
     "@angular/common": "^2.3.1",
     "@angular/compiler": "^2.3.1",
     "@angular/compiler-cli": "^2.3.1",
